@@ -3,6 +3,7 @@ module Eventbrite
     def self.retrieve(event_id, id, token=nil)
       instance = self.new(id, token)
       instance.event_id = event_id
+      instance.retrieve_options = {'expansion': 'promotional_code'}
       instance.refresh
       instance
     end
