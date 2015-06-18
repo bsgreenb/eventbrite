@@ -8,8 +8,6 @@ module Eventbrite
     end
 
     def url
-      print "HERE WITH "
-      print "/events/#{CGI.escape(self.event_id)}#{self.class.url}/#{CGI.escape(self.id)}?expand=promotional_code"
       "/events/#{CGI.escape(self.event_id)}#{self.class.url}/#{CGI.escape(self.id)}?expand=promotional_code"
     end
   end
